@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e6d8560-7e08-4dda-8bb8-407b0fec25c5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2E6nFlv4FnLUGqsPaOrtOsGCXAv" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/java workspace/community/src/main/resources",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "spring.configuration.checksum": "82df41632da476065ce2997900554442"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java workspace\community\src\main\resources" />
+      <recent name="D:\java workspace\community\src\main\resources\templates" />
+      <recent name="D:\java workspace\community\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.LoggerTest.testLogger">
+    <configuration name="CommunityApplicationTests.testUserMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nowcoder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nowcoder" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.CommunityApplicationTests" />
+      <option name="METHOD_NAME" value="testUserMapper" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommunityApplicationTests.testdiscussPostService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nowcoder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nowcoder" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.CommunityApplicationTests" />
+      <option name="METHOD_NAME" value="testdiscussPostService" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoggerTest.testLogger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="community" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nowcoder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nowcoder" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.LoggerTest" />
+      <option name="METHOD_NAME" value="testLogger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommunityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="community" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.nowcoder.community.CommunityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LoggerTest.testLogger" />
+        <item itemvalue="JUnit.CommunityApplicationTests.testUserMapper" />
+        <item itemvalue="JUnit.CommunityApplicationTests.testdiscussPostService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e6d8560-7e08-4dda-8bb8-407b0fec25c5" name="Changes" comment="" />
+      <created>1661924801239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661924801239</updated>
+      <workItem from="1661924802878" duration="17932000" />
+      <workItem from="1662036569441" duration="2779000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
