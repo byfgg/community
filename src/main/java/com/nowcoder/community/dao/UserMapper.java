@@ -2,6 +2,7 @@ package com.nowcoder.community.dao;
 
 import com.nowcoder.community.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @author byfgg
@@ -22,11 +23,11 @@ public interface UserMapper {
     int insertUser(User user);
 
     //更新状态
-    int updateStatus(int id, int status);
+    int updateStatus(@Param("id") int id, @Param("status") int status);
 
     //更新url
-    int updateUrl(int id, String headerUrl);
+    int updateUrl(@Param("id")int id, @Param("headerUrl")String headerUrl);
 
     //更新密码
-    int updatePassword(int id, String password);
+    int updatePassword(@Param("id")int id, @Param("password")String password);
 }

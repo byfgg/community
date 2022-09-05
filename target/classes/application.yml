@@ -12,6 +12,19 @@ spring:
     username: root
     password: 1234
     type: com.alibaba.druid.pool.DruidDataSource
+  mail:
+    host: smtp.sina.com
+    port: 465
+    username: byfgg123@sina.com
+    password: 5df3c9d73de3386c
+    properties:
+      mail:
+        smtl:
+          auth: true
+    protocol: smtps
+
+
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.nowcoder.community.entity
@@ -24,3 +37,9 @@ logging:
     com:
       nowcoder:
         community: debug
+
+community:
+  path:
+    domain: http://localhost:8080
+    upload: d:/work/data/upload
+
