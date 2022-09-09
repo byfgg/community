@@ -4,6 +4,11 @@ server:
     context-path: /community
 
 spring:
+  # RedisProperties
+  redis:
+    database: 11
+    host: localhost
+    port: 6379
   thymeleaf:
     cache: false
   datasource:
@@ -42,4 +47,5 @@ community:
   path:
     domain: http://localhost:8080
     upload: d:/work/data/upload
+
 

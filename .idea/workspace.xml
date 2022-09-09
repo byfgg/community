@@ -4,65 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e6d8560-7e08-4dda-8bb8-407b0fec25c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/annotation/LoginRequired.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/config/KaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/DiscussPostController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/interceptor/LoginRequiredInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/interceptor/LoginTicketInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/CommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/LoginTicketMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/LoginTicket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/CommunityConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/CommunityUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/CookieUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/HostHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/MailClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/SensitiveFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sensitive-words.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/nowcoder/MailTest.java" afterDir="false" />
+    <list default="true" id="0e6d8560-7e08-4dda-8bb8-407b0fec25c5" name="Changes" comment="第二次修改">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/aspect/ServiceAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/FollowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/LikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/advice/ExceptionAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/MessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/FollowService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/LikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/RedisKeyUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/nowcoder/RedisTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/DiscussPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/DiscussPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/CommentMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/DiscussPostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/DiscussPostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/DiscussPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/DiscussPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/DiscussPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/DiscussPostService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/CommunityConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nowcoder/community/util/CommunityConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DiscussPostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DiscussPostMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/discuss.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/discuss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mail/activation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mail/activation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/discuss-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/operate-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/setting.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/site/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/nowcoder/CommunityApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nowcoder/CommunityApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nowcoder/LoggerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nowcoder/LoggerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/nowcoder/MailTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/nowcoder/MailTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/controller/DiscussPostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/controller/DiscussPostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/dao/CommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/dao/CommentMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/dao/DiscussPostMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/dao/DiscussPostMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/Comment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/DiscussPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/DiscussPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/LoginTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/LoginTicket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/service/CommentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/service/DiscussPostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/service/DiscussPostService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nowcoder/community/util/CommunityConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nowcoder/community/util/CommunityConstant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/DiscussPostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DiscussPostMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/discuss.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/discuss.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/letter.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/letter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mail/activation.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mail/activation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/site/discuss-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/discuss-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/operate-result.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/operate-result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nowcoder/CommunityApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/nowcoder/CommunityApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/error/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/letter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/letter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/site/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/site/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nowcoder/LoggerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/nowcoder/LoggerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/nowcoder/MailTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/nowcoder/MailTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +103,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2E6nFlv4FnLUGqsPaOrtOsGCXAv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -108,7 +123,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/java workspace/community/src/main/resources/mapper",
+    "last_opened_file_path": "D:/java workspace/community/src/main/resources/static/js",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "vcs.Git",
     "spring.configuration.checksum": "82df41632da476065ce2997900554442"
@@ -124,12 +139,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java workspace\community\src\main\resources\static\js" />
       <recent name="D:\java workspace\community\src\main\resources\mapper" />
       <recent name="D:\java workspace\community\src\main\resources" />
       <recent name="D:\java workspace\community\src\main\resources\templates" />
       <recent name="D:\java workspace\community\src\main\resources\static" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java workspace\community\src\main\resources\templates" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.nowcoder.community.service" />
       <recent name="com.nowcoder" />
     </key>
   </component>
@@ -187,7 +207,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommunityApplicationTests.testStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoggerTest.testLogger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="community" />
       <extension name="coverage">
         <pattern>
@@ -196,14 +216,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.nowcoder" />
-      <option name="MAIN_CLASS_NAME" value="com.nowcoder.CommunityApplicationTests" />
-      <option name="METHOD_NAME" value="testStatus" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.LoggerTest" />
+      <option name="METHOD_NAME" value="testLogger" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailTest.sendMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RedisTest.testHashes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="community" />
       <extension name="coverage">
         <pattern>
@@ -212,8 +232,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.nowcoder" />
-      <option name="MAIN_CLASS_NAME" value="com.nowcoder.MailTest" />
-      <option name="METHOD_NAME" value="sendMail" />
+      <option name="MAIN_CLASS_NAME" value="com.nowcoder.RedisTest" />
+      <option name="METHOD_NAME" value="testHashes" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -228,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RedisTest.testHashes" />
+        <item itemvalue="JUnit.LoggerTest.testLogger" />
         <item itemvalue="JUnit.CommunityApplicationTests.testFilter" />
         <item itemvalue="JUnit.CommunityApplicationTests.testLoginTicket2" />
         <item itemvalue="JUnit.CommunityApplicationTests.testLoginTicket" />
-        <item itemvalue="JUnit.CommunityApplicationTests.testStatus" />
-        <item itemvalue="JUnit.MailTest.sendMail" />
       </list>
     </recent_temporary>
   </component>
@@ -245,8 +265,16 @@
       <option name="presentableId" value="Default" />
       <updated>1661924801239</updated>
       <workItem from="1661924802878" duration="17932000" />
-      <workItem from="1662036569441" duration="68980000" />
+      <workItem from="1662036569441" duration="118595000" />
     </task>
+    <task id="LOCAL-00001" summary="第二次修改">
+      <created>1662386614285</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662386614286</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,5 +290,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第二次修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二次修改" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

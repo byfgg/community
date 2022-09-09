@@ -32,4 +32,9 @@ public interface CommunityConstant {
     //回复评论
     int ENTITY_TYPE_REPLY=2;
 
+    //实体  人
+    int ENTITY_TYPE_USER=3;
+
+
+
 }
