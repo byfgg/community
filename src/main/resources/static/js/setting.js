@@ -1,13 +1,14 @@
 // 上传到七牛云服务器的异步处理方法
 $(function () {
     $("#uploadForm").submit(upload);
+    $("form").submit(check_data);
 });
 
 function upload() {
     // 表单异步提交文件不能用$.post--不能映射文件类型，所以用原生$.ajax
     $.ajax({
         // 七牛云华北地区上传地址
-        url: "http://upload-z1.qiniup.com",
+        url: "http://upload.qiniup.com",
         method: "post",
         // 不要把表单内容转为字符串（因为是上传图片文件）
         processData: false,
@@ -37,4 +38,14 @@ function upload() {
     });
     // <form>表单没写action，就必须返回false
     return false;
+}
+
+function check_data() {
+    var pwd1 = $("#new-password").val();
+    var pwd2 = $("#confirm-password").val();
+    if(pwd1 != pwd2) {
+        $("#confirm-password").addClass("is-invalid");
+        return false;
+    }
+    return true;
 }

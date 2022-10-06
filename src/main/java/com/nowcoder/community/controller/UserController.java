@@ -2,13 +2,18 @@ package com.nowcoder.community.controller;
 
 import com.google.code.kaptcha.impl.FishEyeGimpy;
 import com.nowcoder.community.annotation.LoginRequired;
+import com.nowcoder.community.entity.Comment;
+import com.nowcoder.community.entity.DiscussPost;
+import com.nowcoder.community.entity.Page;
 import com.nowcoder.community.entity.User;
-import com.nowcoder.community.service.FollowService;
-import com.nowcoder.community.service.LikeService;
-import com.nowcoder.community.service.UserService;
+import com.nowcoder.community.service.*;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.HostHolder;
+import com.qiniu.util.Auth;
+import com.qiniu.util.StringMap;
+import com.sun.org.apache.xml.internal.dtm.DTMDOMException;
+import jdk.internal.org.objectweb.asm.Handle;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,10 +22,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.context.Theme;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.Multipart;
@@ -30,6 +32,10 @@ import javax.swing.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author byfgg
@@ -50,6 +56,10 @@ public class UserController implements CommunityConstant {
     private LikeService likeService;
     @Autowired
     private FollowService followService;
+    @Autowired
+    private DiscussPostService discussPostService;
+    @Autowired
+    private CommentService commentService;
 
     @Value("${community.path.upload}")
     private String uploadPath;
@@ -60,13 +70,48 @@ public class UserController implements CommunityConstant {
     @Value("${server.servlet.context-path}")
     private String contextPath;
 
+    @Value("${qiniu.key.access}")
+    private String accessKey;
+
+    @Value("${qiniu.key.secret}")
+    private String secretKey;
+
+    @Value("${qiniu.bucket.header.name}")
+    private String headerBucketName;
+
+    @Value("${qiniu.bucket.header.url}")
+    private String headerBucketUrl;
 
     @LoginRequired
     @GetMapping("/setting")
-    public String getSettingPage() {
+    public String getSettingPage(Model model) {
+        //上传文件名称
+        String fileName = CommunityUtil.generateUUID();
+        //设置响应信息
+        StringMap policy = new StringMap();
+        policy.put("returnBody", CommunityUtil.getJSONString(0));
+        //生成上传凭证
+        Auth auth = Auth.create(accessKey, secretKey);
+        String uploadToken = auth.uploadToken(headerBucketName, fileName, 3600, policy);
+
+        model.addAttribute("uploadToken", uploadToken);
+        model.addAttribute("fileName", fileName);
+
         return "/site/setting";
     }
 
+    @PostMapping("/header/url")
+    @ResponseBody
+    public String updateHeaderUrl(String fileName) {
+        if (StringUtils.isBlank(fileName)) {
+            return CommunityUtil.getJSONString(1, "文件名不能为空");
+        }
+        String url = headerBucketUrl + "/" + fileName;
+        userService.updateHeaderUrl(hostHolder.getUser().getId(), url);
+        return CommunityUtil.getJSONString(0);
+    }
+
+    //废弃
     @PostMapping("/upload")
     public String uploadHeader(MultipartFile headerImage, Model model) {
         //判断文件是否为空
@@ -99,6 +144,7 @@ public class UserController implements CommunityConstant {
         return "redirect:/index";
     }
 
+    //废弃
     @LoginRequired
     @GetMapping("/header/{fileName}")
     public void getHeader(@PathVariable("fileName") String fileName, HttpServletResponse response) {
@@ -144,8 +190,49 @@ public class UserController implements CommunityConstant {
         model.addAttribute("hasFollowed", hasFollowed);
 
         return "/site/profile";
+    }
 
+    @GetMapping("/mypost/{userId}")
+    public String getMyPost(@PathVariable("userId") int userId, Model model, Page page) {
+        page.setRows(discussPostService.findDiscussPostsRows(userId));
+        page.setPath("/user/mypost/" + userId);
+        List<DiscussPost> list = discussPostService.findDiscussPosts(userId, page.getOffset(), page.getLimit(), 0);
+        List<Map<String, Object>> discussPosts = new ArrayList<>();
+        if (list != null) {
+            for (DiscussPost post : list) {
+                HashMap<String, Object> map = new HashMap<>();
+                map.put("post", post);
+                long likeCount = likeService.findEntityLikeCount(ENTITY_TYPE_POST, post.getId());
+                map.put("likeCount", likeCount);
+                discussPosts.add(map);
+            }
+        }
+        int postCount = discussPostService.findDiscussPostsRows(userId);
+        model.addAttribute("postCount", postCount);
+        model.addAttribute("posts", discussPosts);
 
+        return "/site/my-post";
+    }
+
+    @GetMapping("/myreply/{userId}")
+    public String getMyReply(@PathVariable("userId") int userId, Model model, Page page) {
+        page.setRows(commentService.findCommentCountByUser(ENTITY_TYPE_POST, userId));
+        page.setPath("/user/myreply/" + userId);
+        List<Comment> list = commentService.findCommentsByUser(ENTITY_TYPE_POST, userId, page.getOffset(), page.getLimit());
+        List<Map<String, Object>> comments = new ArrayList<>();
+        if (list != null) {
+            for (Comment comment : list) {
+                HashMap<String, Object> map = new HashMap<>();
+                map.put("comment", comment);
+                DiscussPost post = discussPostService.findDiscussPostById(comment.getEntityId());
+                map.put("post", post);
+                comments.add(map);
+            }
+        }
+        int rows = commentService.findCommentCountByUser(ENTITY_TYPE_POST, userId);
+        model.addAttribute("replyCount", rows);
+        model.addAttribute("comments", comments);
+        return "/site/my-reply";
     }
 
 

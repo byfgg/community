@@ -27,14 +27,32 @@ public interface CommunityConstant {
     int REMEMBER_EXPIRED_SECONDS = 3600 * 12 * 100;
 
     //回复贴子
-    int ENTITY_TYPE_POST=1;
+    int ENTITY_TYPE_POST = 1;
 
     //回复评论
-    int ENTITY_TYPE_REPLY=2;
+    int ENTITY_TYPE_REPLY = 2;
 
     //实体  人
-    int ENTITY_TYPE_USER=3;
+    int ENTITY_TYPE_USER = 3;
 
+
+    String TOPIC_COMMENT = "comment";
+
+    String TOPIC_LIKE = "like";
+
+    String TOPIC_FOLLOW = "follow";
+
+    String TOPIC_SHARE = "share";
+
+    int SYSTEM_USER_ID = 1;
+
+    String TOPIC_PUBLISH = "publish";
+
+    String TOPIC_DELETE = "delete";
+
+    String AUTHORITY_USER = "user";
+    String AUTHORITY_ADMIN = "admin";
+    String AUTHORITY_MODERATOR = "moderator";
 
 
 }

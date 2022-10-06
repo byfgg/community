@@ -1,51 +1,6 @@
-server:
-  port: 8080
-  servlet:
-    context-path: /community
-
 spring:
-  # RedisProperties
-  redis:
-    database: 11
-    host: localhost
-    port: 6379
-  thymeleaf:
-    cache: false
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/community?characterEncoding=utf-8&useUnicode=true&useSSL=false&serverTimezone=Hongkong
-    username: root
-    password: 1234
-    type: com.alibaba.druid.pool.DruidDataSource
-  mail:
-    host: smtp.sina.com
-    port: 465
-    username: byfgg123@sina.com
-    password: 5df3c9d73de3386c
-    properties:
-      mail:
-        smtl:
-          auth: true
-    protocol: smtps
-
-
-
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.nowcoder.community.entity
-  configuration:
-    use-generated-keys: true
-    map-underscore-to-camel-case: true
+  profiles:
+    active: develop
 
 logging:
-  level:
-    com:
-      nowcoder:
-        community: debug
-
-community:
-  path:
-    domain: http://localhost:8080
-    upload: d:/work/data/upload
-
-
+  config: classpath:logback-spring-${spring.profiles.active}.xml

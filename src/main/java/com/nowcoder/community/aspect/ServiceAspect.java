@@ -19,8 +19,8 @@ import java.util.Date;
  * @author byfgg
  * @create 2022-09-07 13:00
  */
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class ServiceAspect {
 
     public static final Logger logger = LoggerFactory.getLogger(ServiceAspect.class);
@@ -32,7 +32,11 @@ public class ServiceAspect {
     @Before("pointcut()")
     public void before(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        if (attributes == null) {
+            return;
+        }
         HttpServletRequest request = attributes.getRequest();
+
         String ip = request.getRemoteHost();
         String now = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
         String target = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();

@@ -48,7 +48,7 @@ class CommunityApplicationTests {
 
     @Test
     void testdiscussPostService() {
-        List<DiscussPost> discussPosts = discussPostService.findDiscussPosts(0, 0, 10);
+        List<DiscussPost> discussPosts = discussPostService.findDiscussPosts(0, 0, 10,0);
         for (DiscussPost post : discussPosts) {
             System.out.println(post);
         }
